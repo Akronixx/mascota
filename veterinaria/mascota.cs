@@ -11,10 +11,10 @@ namespace Veterinario
         string[] lista1 = new string[0];
         int[] lista2 = new int[0];
         string[] lista3 = new string[0];
-        string[] lista4 = new string[0];
-        string[] lista5 = new string[0];
 
         int posicion = 0;
+        int posicion2 = 0;
+        int posicion3 = 0;
 
         public void crear()
         {
@@ -29,26 +29,27 @@ namespace Veterinario
             Console.Write("Ingresa la edad del animal : ");
             RespuestaEd = Convert.ToInt32(Console.ReadLine());
             Array.Resize(ref lista2, lista2.Length + 1);
-            lista2[posicion] = RespuestaEd;
-            posicion = posicion + 1;
+            lista2[posicion2] = RespuestaEd;
+            posicion2 = posicion2 + 1;
             Console.WriteLine("A agregado la edad del animal ");
             string RespuestaEs;
-            Console.Write("Ingresa el nombre del perro : ");
+            Console.Write("Ingresa la raza del animal : ");
             RespuestaEs = Console.ReadLine();
             Array.Resize(ref lista3, lista3.Length + 1);
-            lista3[posicion] = RespuestaEs;
-            posicion = posicion + 1;
-            Console.WriteLine("A agregado la especie del animal ");
-            string servicio1;
-            Console.Write("Ingresa el nombre de animal : ");
-            servicio1 = Console.ReadLine();
-            Array.Resize(ref lista4, lista4.Length + 1);
-            lista4[posicion] = servicio1;
-            string servicio2;
-            Console.Write("Ingresa el nombre de animal : ");
-            servicio2 = Console.ReadLine();
-            Array.Resize(ref lista5, lista5.Length + 1);
-            lista5[posicion] = servicio2;
+            lista3[posicion3] = RespuestaEs;
+            posicion3 = posicion3 + 1;
         }
+        public void mostrar()
+        {
+            for (int i = 0; i < lista1.Length; i++)
+            {
+                Console.WriteLine($"Datos del animal N°{i+1}");
+                Console.WriteLine($"Nombre del animal {lista1[i]}");
+                Console.WriteLine($"Edad del animal {lista2[i]}");
+                Console.WriteLine($"Raza del animal {lista3[i]}");
+            }
+            
+        }
+
     }
 }

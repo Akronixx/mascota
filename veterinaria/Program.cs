@@ -19,6 +19,7 @@ Debe tener una rama por integrante, el lider debe tener por lo menos 2 ramas: ma
 */
 using Veterinario;
 creard d = new creard();
+
 byte opcion;
 
 string regresar;
@@ -62,7 +63,9 @@ do
 
         case 1: d.crear(); break;
 
-        case 2: break;
+        case 2:
+            d.mostrar();
+            break;
 
         case 3: break;
 
